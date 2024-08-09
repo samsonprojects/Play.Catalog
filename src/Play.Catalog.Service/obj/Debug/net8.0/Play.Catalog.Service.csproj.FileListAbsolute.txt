@@ -5,7 +5,6 @@
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Play.Catalog.Service.runtimeconfig.json
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Play.Catalog.Service.dll
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Play.Catalog.Service.pdb
-/Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/samantwi-boasiako/Projects/PLAY.MICROSERVICES/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll

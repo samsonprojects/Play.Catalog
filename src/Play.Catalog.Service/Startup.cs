@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.Definition;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,9 +13,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 using Play.Catalog.Service.Entities;
+using Play.Common.Identity;
 using Play.Common.MassTransit;
 using Play.Common.MongoDB;
-using Play.Common.Settings;
+using Play.Common.Service.Settings;
 
 
 namespace Play.Catalog.Service
@@ -34,9 +36,11 @@ namespace Play.Catalog.Service
         public void ConfigureServices(IServiceCollection services)
         {
             var serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
-            services.AddMongo().AddMongoRepository<Item>("Items")
+            services.AddMongo()
+            .AddMongoRepository<Item>("Items")
             .AddMassTransitWithRabbitMq()
-            ;
+            .AddJwtBearerAuthentication();
+
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;
@@ -67,6 +71,8 @@ namespace Play.Catalog.Service
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication(); // must be done in this order to work correctly
 
             app.UseAuthorization();
 

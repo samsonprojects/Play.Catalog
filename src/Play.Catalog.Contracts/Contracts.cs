@@ -20,5 +20,7 @@ namespace Play.Catalog.Contracts
             decimal Price);
 
         public record CatalogItemDeleted(Guid Id);
+
+
     }
 }
